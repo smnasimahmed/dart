@@ -1,6 +1,5 @@
 class User {
-  User({this.id = _annonymouseId, this.name = _annonymouseName})
-      : assert(id >= 0);
+  User({this.id = 0, this.name = _annonymouseName}) : assert(id >= 0);
 
   User.annonymouse() : this();
 
@@ -9,7 +8,10 @@ class User {
   int id;
   String name;
 
-  static const _annonymouseId = 0;
+  int get annonymouseId => _annonymouseId;
+  set annonymouseIdSet(value) => _annonymouseId = value;
+
+  static var _annonymouseId = 0;
   static const _annonymouseName = 'annonymouse';
 }
 

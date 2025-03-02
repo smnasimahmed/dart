@@ -5,6 +5,8 @@ void main() {
   print(user.id);
   print(user.name);
   print(user.isBigid);
+  user.annonymouseIdSet = 10;
+  print(user.annonymouseId);
 
   final email = Email();
   print('value of email ${Email().getValue}');
