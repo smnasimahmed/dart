@@ -1,5 +1,7 @@
-import 'package:singleton_pattern/singleton_pattern.dart' as singleton_pattern;
+import 'package:singleton_pattern/singleton_class.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${singleton_pattern.calculate()}!');
+void main() {
+  final obj1 = Mysingleton();
+  final obj2 = Mysingleton();
+  print(identical(obj1, obj2));
 }
