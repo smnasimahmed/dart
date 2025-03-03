@@ -1,3 +1,4 @@
+import 'package:dart_apprentics_chapter06_challanges/spheres.dart';
 import 'package:dart_apprentics_chapter06_challanges/student_class.dart';
 
 void main() {
@@ -6,4 +7,7 @@ void main() {
 
   print(obj1);
   print(obj2);
+
+  final volumeSurface = Spheres(radius: 12);
+  print(volumeSurface);
 }
