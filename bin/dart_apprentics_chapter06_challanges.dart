@@ -1,5 +1,9 @@
-import 'package:dart_apprentics_chapter06_challanges/dart_apprentics_chapter06_challanges.dart' as dart_apprentics_chapter06_challanges;
+import 'package:dart_apprentics_chapter06_challanges/student_class.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${dart_apprentics_chapter06_challanges.calculate()}!');
+void main() {
+  final obj1 = Student('Bert', 'Hanson', 85);
+  final obj2 = Student('Ernie', 'Oz', 89);
+
+  print(obj1);
+  print(obj2);
 }
