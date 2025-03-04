@@ -1,10 +1,25 @@
 class User {
-  User({required id, required name});
+  User({required this.id, required this.name});
 
   String toJson() {
     return '{"id":$id,"name":$name}';
   }
 
-  int id = 0;
-  String name = '';
+  factory User.fromJson(Map<String, Object> json) {
+    final userId = json['id'] as int;
+    final userName = json['name'] as String;
+    return User(id: userId, name: userName);
+  }
+
+  // static User fromJson(Map<String, Object> json) {
+  //   final userId = json['id'] as int;
+  //   final userName = json['name'] as String;
+  //   return User(id: userId, name: userName);
+  // }
+
+  @override
+  String toString() => '{"id":$id,"name":$name}';
+
+  int id;
+  String name;
 }
