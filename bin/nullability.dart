@@ -1,5 +1,9 @@
-import 'package:nullability/nullability.dart' as nullability;
+void main() {
+  print(isPositive(3));
+  print(isPositive(-1));
+  print(isPositive(null));
+}
 
-void main(List<String> arguments) {
-  print('Hello world: ${nullability.calculate()}!');
+bool isPositive(int andInteger) {
+  return !andInteger.isNegative;
 }
