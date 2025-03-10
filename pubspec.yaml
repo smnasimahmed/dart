@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: nullability
+=======
+name: hellow_dart_project
+>>>>>>> origin/class_and_methods
 description: A sample command-line application.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
