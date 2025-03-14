@@ -6,7 +6,7 @@
             "name": "Dart",
             "type": "dart",
             "request": "launch",
-            "program": "bin/hellow_dart_project.dart"
+            "program": "bin/nullability.dart"
         }
     ]
 }
