@@ -21,7 +21,7 @@ void main() {
   print(fontSize); //20.2
 
   // age = -3;
-  print(age?.toDouble());
+  // print(age?.toDouble());
 
   // Assertion operator!
   bool flowerIsBeautiful = isBeautiful('flower')!;
@@ -33,13 +33,4 @@ bool isPositive(int? andInteger) {
     return false;
   }
   return !andInteger.isNegative;
-}
-
-bool? isBeautiful(String item) {
-  if (item == 'flower') {
-    return true;
-  } else if (item == 'garbage') {
-    return false;
-  }
-  return null;
 }
