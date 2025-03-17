@@ -29,12 +29,19 @@ void main() {
 
   // Null aware cascade operation
   User? user;
-  // ?..name = 'Ray'
-  // ..id = 42;
+
+  user //If you commentout next 2 line will see a null
+    ?..name = 'Ray'
+    ..id = 42;
 
   // ignore: dead_code
   String? lengthString = user?.name?.length.toString();
   print(lengthString);
+
+  List<int>? myList = [1, 2, 3];
+  myList = null;
+  int? myItem = myList?[2];
+  print(myItem);
 }
 
 bool isPositive(int? andInteger) {
