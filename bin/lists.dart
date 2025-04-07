@@ -41,12 +41,17 @@ void main() {
   // desserts.forEach((dessert) => print(dessert)); //same job as for loop
   // desserts.forEach(print); // same job
   const pastries = ['cookies', 'croissants'];
-  const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
+  // const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
 
   // const desserts = ['donutes', ...pastries, ...candy]; //Spread operator for expending list
   // print(desserts);
 
-  List<String>? coffees;
-  final hotDrinks = ['milk', 'tea', ...?coffees]; //null spread opeartor
-  print(hotDrinks);
+  // List<String>? coffees;
+  // final hotDrinks = ['milk', 'tea', ...?coffees]; //null spread opeartor
+  // print(hotDrinks);
+
+  const peanutAllergy = true;
+
+  const candy = ['Junior Mints', 'Twizzlers', if (!peanutAllergy) 'Reeses'];
+  print(candy);
 }
