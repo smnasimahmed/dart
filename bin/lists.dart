@@ -47,6 +47,6 @@ void main() {
   // print(desserts);
 
   List<String>? coffees;
-  final hotDrinks = ['milk', 'tea', ...?coffees];
+  final hotDrinks = ['milk', 'tea', ...?coffees]; //null spread opeartor
   print(hotDrinks);
 }
