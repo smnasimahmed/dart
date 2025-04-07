@@ -43,6 +43,10 @@ void main() {
   const pastries = ['cookies', 'croissants'];
   const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
 
-  const desserts = ['donutes', ...pastries, ...candy];
-  print(desserts);
+  // const desserts = ['donutes', ...pastries, ...candy]; //Spread operator for expending list
+  // print(desserts);
+
+  List<String>? coffees;
+  final hotDrinks = ['milk', 'tea', ...?coffees];
+  print(hotDrinks);
 }
