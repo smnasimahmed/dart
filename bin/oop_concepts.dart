@@ -1,6 +1,6 @@
 // import 'encapsulation.dart';
 // import 'abstraction.dart';
-// import 'Inheritance.dart';
+import 'Inheritance.dart';
 
 void main() {
   // // // Encapsulation
@@ -36,4 +36,14 @@ void main() {
   //   ..bark()
   //   ..eat()
   //   ..sleep();
+  // // Inheritance Practice
+  Car()
+    ..start()
+    ..honk()
+    ..stop();
+
+  Motorcycle()
+    ..start()
+    ..rev()
+    ..stop();
 }
