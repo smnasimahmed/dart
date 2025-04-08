@@ -1,9 +1,12 @@
 // import 'encapsulation.dart';
 // import 'abstraction.dart';
 // import 'Inheritance.dart';
+import 'package:lists/lists.dart';
+
+import 'polymorphism.dart';
 
 void main() {
-  // // // Encapsulation
+  // // // Encapsulation ============
   // // Actually this is the outer world
   // // where I can't use private variables of a class
   // Student student = Student(); // Here Student() is a default constructor
@@ -14,7 +17,7 @@ void main() {
 
   // print("${student.name}'s age is ${student.age} years old"); // Using getter
 
-  // // // Abstraction
+  // // // Abstraction ===============
   // Dog dog = Dog();
   // Cat cat = Cat();
 
@@ -26,7 +29,7 @@ void main() {
 
   // Rectangle(height: 10, width: 12.3).display();
 
-  // // // Inheritance
+  // // // Inheritance ================
   // Cat()
   //   ..meow()
   //   ..eat()
@@ -46,4 +49,22 @@ void main() {
 //     ..start()
 //     ..rev()
 //     ..stop();
+
+  // // Polymorphism
+
+  // Changing object on same abstract function
+  List<Vehicle> garage = [Car(), Motorcycle(), Car()];
+
+  // all function are same for all objects
+  for (Vehicle vehicle in garage) {
+    vehicle.start();
+    vehicle.drive();
+    // if we want to add sound effect
+    vehicle.soundEffect();
+    vehicle.stop();
+    print('---');
+  }
 }
+// Inheritance = Parent–Child connection
+// Abstraction = What should the child do
+// Polymorphism = How each child does it differently
