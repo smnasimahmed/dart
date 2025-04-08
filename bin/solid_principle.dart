@@ -1,66 +1,29 @@
+import 'single_responsibility_principle.dart';
+
 void main() {
-  // List<String> desserts = ['cookies', 'cupcakes', 'donuts', 'pie'];
-  // final secondElement = desserts[1];
-  // final index = desserts.indexOf('pie');
-  // print(secondElement);
-  // print(desserts);
-  // print(index);
-  // desserts.add('brownies');
-  // print(desserts);
-  // desserts.remove('donuts');
-  // print(desserts);
+  // // Practice Single Responsibility Principle (SRP)===========
+  // for printing
+  User person = User(name: 'Nasim', email: 'nasim@gmail.com');
+  person.printUser();
 
-  // final modifiableList = [
-  //   DateTime.now(),
-  //   DateTime.now(),
-  // ];
+  UserStorage().saveToFile(person);
 
-  // print(modifiableList);
-  // // When you dont know what will be the value comes after runtime
-  // // But you want to value become deeply immutable that 'final' can't
-  // final unmodifiableList = List.unmodifiable(modifiableList);
-  // print(unmodifiableList);
+  // Practice Single Responsibility Principle (SRP)
+  // Setting Data
+  BlogPost blogAction = BlogPost(
+      title: 'Artificial Intelligence',
+      content: 'Machine Learning',
+      author: 'AKM Mostafa');
 
-  const drinks = ['water', 'milk', 'juice', 'soda'];
+  // Display formate
+  Display().formatForDisplay(blogAction);
 
-  // // access the first and last element
-  // drinks.first; // water
-  // drinks.last; // soda
+  // File saving
+  Saving().saveToFile(blogAction);
 
-  // // check whether a list is empty or not empty
-  // drinks.isEmpty; //false
-  // drinks.isNotEmpty; //true
-  // // similarly you can do this too
-  // drinks.length == 0; //false
-  // drinks.length > 0; //true
+  // Notification sowing
+  Notification().sendNotification(blogAction);
 
-  // for (var dessert in desserts) {
-  //   print(dessert);
-  // }
-
-  // desserts.forEach((dessert) => print(dessert)); //same job as for loop
-  // desserts.forEach(print); // same job
-  const pastries = ['cookies', 'croissants'];
-  // const candy = ['Junior Mints', 'Twizzlers', 'M&Ms'];
-
-  // const desserts = ['donutes', ...pastries, ...candy]; //Spread operator for expending list
-  // print(desserts);
-
-  // List<String>? coffees;
-  // final hotDrinks = ['milk', 'tea', ...?coffees]; //null spread opeartor
-  // print(hotDrinks);
-
-  const peanutAllergy = true;
-
-  // this is called  Collection if
-  const candy = ['Junior Mints', 'Twizzlers', if (!peanutAllergy) 'Reeses'];
-  print(candy);
-
-  // this is called Collection for
-  const deserts = ['gobi', 'sahara', 'arctic'];
-  List<String> bigDeserts = [
-    'ARABIAN',
-    for (var desert in deserts) desert.toUpperCase()
-  ];
-  print(bigDeserts);
+  // Social media sharing
+  SocialMediaSharing().shareToSocialMedia(blogAction);
 }
