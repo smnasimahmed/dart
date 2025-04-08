@@ -1,5 +1,6 @@
 // import 'encapsulation.dart';
-import 'abstraction.dart';
+// import 'abstraction.dart';
+import 'Inheritance.dart';
 
 void main() {
   // // // Encapsulation
@@ -13,15 +14,26 @@ void main() {
 
   // print("${student.name}'s age is ${student.age} years old"); // Using getter
 
-  // // Abstraction
-  Dog dog = Dog();
-  Cat cat = Cat();
+  // // // Abstraction
+  // Dog dog = Dog();
+  // Cat cat = Cat();
 
-  dog.makeSound();
-  cat.makeSound();
-  // // Abstraction Practice
-  Circle cicle = Circle(10.2);
-  cicle.display();
+  // dog.makeSound();
+  // cat.makeSound();
+  // // // Abstraction Practice
+  // Circle cicle = Circle(10.2);
+  // cicle.display();
 
-  Rectangle(height: 10, width: 12.3).display();
+  // Rectangle(height: 10, width: 12.3).display();
+
+  // // Inheritance
+  Cat()
+    ..meow()
+    ..eat()
+    ..sleep();
+
+  Dog()
+    ..bark()
+    ..eat()
+    ..sleep();
 }
