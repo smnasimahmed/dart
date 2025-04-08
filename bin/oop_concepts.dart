@@ -1,8 +1,6 @@
 // import 'encapsulation.dart';
 // import 'abstraction.dart';
 // import 'Inheritance.dart';
-import 'package:lists/lists.dart';
-
 import 'polymorphism.dart';
 
 void main() {
