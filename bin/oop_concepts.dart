@@ -1,6 +1,6 @@
 // import 'encapsulation.dart';
 // import 'abstraction.dart';
-import 'Inheritance.dart';
+// import 'Inheritance.dart';
 
 void main() {
   // // // Encapsulation
@@ -26,14 +26,14 @@ void main() {
 
   // Rectangle(height: 10, width: 12.3).display();
 
-  // // Inheritance
-  Cat()
-    ..meow()
-    ..eat()
-    ..sleep();
+  // // // Inheritance
+  // Cat()
+  //   ..meow()
+  //   ..eat()
+  //   ..sleep();
 
-  Dog()
-    ..bark()
-    ..eat()
-    ..sleep();
+  // Dog()
+  //   ..bark()
+  //   ..eat()
+  //   ..sleep();
 }
