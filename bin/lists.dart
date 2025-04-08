@@ -52,6 +52,15 @@ void main() {
 
   const peanutAllergy = true;
 
+  // this is called  Collection if
   const candy = ['Junior Mints', 'Twizzlers', if (!peanutAllergy) 'Reeses'];
   print(candy);
+
+  // this is called Collection for
+  const deserts = ['gobi', 'sahara', 'arctic'];
+  List<String> bigDeserts = [
+    'ARABIAN',
+    for (var desert in deserts) desert.toUpperCase()
+  ];
+  print(bigDeserts);
 }
