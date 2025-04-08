@@ -22,9 +22,6 @@ void main() {
   // // Abstraction Practice
   Circle cicle = Circle(10.2);
   cicle.display();
-  cicle.area();
 
-  Rectangle rectangle = Rectangle(height: 10, width: 12.3)
-    ..display()
-    ..area();
+  Rectangle(height: 10, width: 12.3).display();
 }
