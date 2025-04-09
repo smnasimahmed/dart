@@ -1,4 +1,4 @@
-import 'single_responsibility_principle.dart';
+import 'package:solid_principle/bin/dart.dart';
 
 void main() {
   // // Practice Single Responsibility Principle (SRP)===========
@@ -16,7 +16,7 @@ void main() {
       author: 'AKM Mostafa');
 
   // Display formate
-  Display().formatForDisplay(blogAction);
+  Display().formateForDisplay(blogAction);
 
   // File saving
   Saving().saveToFile(blogAction);

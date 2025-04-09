@@ -38,7 +38,7 @@ class Display {
 }
 
 class Saving {
-  void savetofile(BlogPost blog) {
+  void saveToFile(BlogPost blog) {
     print('Saving ${blog.title} to file...');
     // file saving logic
   }
