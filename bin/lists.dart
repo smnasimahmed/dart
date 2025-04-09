@@ -63,4 +63,47 @@ void main() {
     for (var desert in deserts) desert.toUpperCase()
   ];
   print(bigDeserts);
+
+  // Practice
+  // mini excercises 1
+  final List<String> months = [];
+  months.add('January');
+  months.add('February');
+  months.add('March');
+  months.add('April');
+  months.add('May');
+  months.add('June');
+  print(months);
+  print('--------------');
+  months.add('July');
+  months.add('August');
+  months.add('September');
+  months.add('October');
+  months.add('November');
+  months.add('December');
+  print(months);
+  print('--------------');
+
+  // mini excercises 2
+  const List immutable_months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+  print(immutable_months);
+  print('--------------');
+
+  // mini excercises 3
+  final uppercaseMonths = [for (String month in months) month.toUpperCase()];
+  print(uppercaseMonths);
+  print('--------------');
 }
