@@ -32,3 +32,10 @@ final Map<String, List> treasureMapList = {
   'glasses': ['on your head'],
   'gold': ['in the cave', 'under your mattress'],
 };
+
+final myHouse = {
+  'bedroom': 'messy',
+  'kitchen': 'messy',
+  'living room': 'messy',
+  'code': 'clean',
+};
