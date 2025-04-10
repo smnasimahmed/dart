@@ -1,4 +1,4 @@
-import 'package:sets/sets.dart';
+import 'package:sets/sets_and_map_variable.dart';
 
 void main() {
   print(anotherSet);
@@ -17,6 +17,9 @@ void main() {
   print(intersection);
   final union = setA.union(setB);
   print(union);
+
+  final Map<String, String> treasureMap = {
+
 }
 
 // Other operations can be used in set
