@@ -31,4 +31,13 @@ void main() {
   print(digitToWord);
   print(treasureMap); // as you can see here is only one gold map
   print(treasureMapList); // both gold map can be sown for List
+  final numberOfCakes = inventory['cakes']; //Accessing elements from a map
+  print(numberOfCakes);
+  print(numberOfCakes?.isEven);
+  inventory['brownies'] = 3; //Adding elements to a map
+  print(inventory);
+  inventory['cakes'] = 1;
+  print(inventory); //Updating an element
+  inventory.remove('cookies'); //Removing elements from a map
+  print(inventory);
 }
