@@ -1,3 +1,4 @@
+// // Sets
 // final Set<int> someSet = {};
 // final anotherSet = {1, 2, 3, 1};
 
@@ -47,3 +48,5 @@ Map<String, String> myInfo = {
   'country': 'Bangladesh',
   'city': 'Dhaka',
 };
+
+const numbers = [1, 2, 3, 4];
