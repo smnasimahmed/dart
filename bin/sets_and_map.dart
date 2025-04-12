@@ -26,7 +26,7 @@ void main() {
 // spread operators
 
 // Maps
-  final Map<String, int> emptyMap = {};
+  // final Map<String, int> emptyMap = {};
   print(inventory);
   print(digitToWord);
   print(treasureMap); // as you can see here is only one gold map
@@ -40,4 +40,38 @@ void main() {
   print(inventory); //Updating an element
   inventory.remove('cookies'); //Removing elements from a map
   print(inventory);
+  // Map properties
+  // Maps have properties just as lists do.
+  inventory.isEmpty; // false
+  inventory.isNotEmpty; // true
+  inventory.length; // 4
+  print(inventory.keys); //it will print only keys in map
+  print(inventory.values); // it will print all values in keys
+  print(inventory.containsKey('pies')); // check key existed in map
+  // Looping over elements of a map
+  // Unlike lists, we can not directly iterate over a map using a for-in loop.
+  // for (var item in inventory) { //The type 'Map<String, int>' used in the 'for' loop must implement 'Iterable'.
+  //   print(inventory[item]);
+  // }
+
+  // this is the way to iterate a map using keys
+  for (var item in inventory.keys) {
+    print(inventory[item]);
+  }
+  // same things using for each loop
+  inventory.forEach((key, value) => print('$key -> $value'));
+
+  // Mini-exercises
+  print("========================");
+  print('Mini-exercises part');
+  print("========================");
+
+  print(myInfo);
+  myInfo['country'] = 'Canada';
+  myInfo['city'] = 'Toronto';
+  myInfo.forEach((key, value) => print('$value')); //print all the values.
+  for (var element in myInfo.keys) {
+    //print all the values.
+    print(myInfo[element]);
+  }
 }

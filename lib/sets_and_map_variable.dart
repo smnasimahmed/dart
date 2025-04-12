@@ -24,7 +24,7 @@ final Map<String, String> treasureMap = {
   'garbage': 'in the dumpster',
   'glasses': 'on your head',
   'gold': 'in the cave',
-  'gold': 'under your mattress', // Here second gold will not work
+  // 'gold': 'under your mattress', // Here second gold will not work
 }; // so we gonna make it String to List
 
 final Map<String, List> treasureMapList = {
@@ -38,4 +38,12 @@ final myHouse = {
   'kitchen': 'messy',
   'living room': 'messy',
   'code': 'clean',
+};
+
+// Mini-exercises
+Map<String, String> myInfo = {
+  'name': 'S M Nasim Ahmed',
+  'profession': 'Flutter Developer',
+  'country': 'Bangladesh',
+  'city': 'Dhaka',
 };
