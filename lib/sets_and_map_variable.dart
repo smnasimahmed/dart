@@ -50,3 +50,7 @@ Map<String, String> myInfo = {
 };
 
 const numbers = [1, 2, 3, 4];
+
+const amounts = [199, 299, 299, 199, 499];
+
+final desserts = ['cookies', 'pie', 'donuts', 'brownies'];

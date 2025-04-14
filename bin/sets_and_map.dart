@@ -87,7 +87,6 @@ void main() {
   print(evens);
 
   //
-  const amounts = [199, 299, 299, 199, 499];
   final total = amounts.reduce((sum, element) => sum + element);
   // so here first time first parameter(sum) got the first value and
   //second parameter (elemet) got the second velue
@@ -98,4 +97,8 @@ void main() {
   // Using fold (Same as reduce method but works on emplty list or set)
   final totalFold = amounts.fold<num>(0, (num sum, element) => sum + element);
   print(totalFold);
+
+  // Sorting a list
+  desserts.sort();
+  print(desserts);
 }
