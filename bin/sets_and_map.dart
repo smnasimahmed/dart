@@ -94,4 +94,8 @@ void main() {
   //in every iteration first parameter will record the final result
   //and second parameter will take new data from list or set. not Map.
   print(total);
+
+  // Using fold (Same as reduce method but works on emplty list or set)
+  final totalFold = amounts.fold<num>(0, (num sum, element) => sum + element);
+  print(totalFold);
 }
