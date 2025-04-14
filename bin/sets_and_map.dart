@@ -101,4 +101,8 @@ void main() {
   // Sorting a list
   desserts.sort();
   print(desserts);
+
+  // Reversing a list
+  var dessertReverserd = desserts.reversed;
+  print(dessertReverserd);
 }
