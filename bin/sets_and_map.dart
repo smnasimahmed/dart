@@ -98,11 +98,15 @@ void main() {
   final totalFold = amounts.fold<num>(0, (num sum, element) => sum + element);
   print(totalFold);
 
-  // Sorting a list
-  desserts.sort();
-  print(desserts);
+  // // Sorting a list
+  // desserts.sort();
+  // print(desserts);
 
   // Reversing a list
   var dessertReverserd = desserts.reversed;
   print(dessertReverserd);
+
+  // Performing a custom sort
+  // sort strings by length and not alphabetically
+  desserts.sort((d1, d2) => d1.length.compareTo(d2.length));
 }
