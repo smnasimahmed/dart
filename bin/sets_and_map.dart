@@ -109,4 +109,11 @@ void main() {
   // Performing a custom sort
   // sort strings by length and not alphabetically
   desserts.sort((d1, d2) => d1.length.compareTo(d2.length));
+
+  // Combining higher order methods
+  // const desserts = ['cake', 'pie', 'donuts', 'brownies'];
+  final bigTallDesserts = desserts
+      .where((dessert) => dessert.length > 5)
+      .map((dessert) => dessert.toUpperCase());
+  print(bigTallDesserts);
 }
