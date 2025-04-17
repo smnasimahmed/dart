@@ -1,5 +1,7 @@
 // import 'package:sets/sets_and_map_variable.dart';
 
+import 'dart:async';
+
 import 'package:sets/sets_and_map_variable.dart';
 
 void main() {
@@ -113,7 +115,25 @@ void main() {
   // Combining higher order methods
   // const desserts = ['cake', 'pie', 'donuts', 'brownies'];
   final bigTallDesserts = desserts
-      .where((dessert) => dessert.length > 5)
+      .where(
+        (dessert) => dessert.length > 5,
+      )
       .map((dessert) => dessert.toUpperCase());
   print(bigTallDesserts);
+
+  // Mini-exercises
+  // 1
+  scores.sort();
+  print(scores);
+
+  final bGrades = scores.where((score) => score > 80 && score < 90);
+  print(bGrades);
+
+  // Challenges
+  // Challenge 1: A unique request
+  Set uniqueCharacters() {
+    return paragraph.split(" ").toSet();
+  }
+
+  print(uniqueCharacters());
 }
