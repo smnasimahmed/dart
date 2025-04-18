@@ -76,7 +76,9 @@ class User {
 
   User(this.id, this.name);
 
-  List<User> users = [
+  // I only made this list static. cause I wanted to access this list
+  // from main. and wanted to print a map using this list.
+  static List<User> users = [
     User(01, 'shakib'),
     User(02, 'farsid'),
     User(03, 'ahmed'),

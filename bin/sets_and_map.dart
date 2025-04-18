@@ -151,4 +151,8 @@ void main() {
   List<Map<String, dynamic>> convertUsersToMap(List<User> users) {
     return users.map((user) => {'id': user.id, 'name': user.name}).toList();
   }
+
+  List<User> allUsers = User.users;
+  List<Map<String, dynamic>> result = convertUsersToMap(allUsers);
+  print(result);
 }
