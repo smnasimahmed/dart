@@ -69,3 +69,16 @@ connective tissue between your classes. In this chapter you’ll
 learn to use tools such as inheritance, interfaces, mixins and
 extension methods to move beyond simple coding and enter
 a world of software design.""";
+
+class User {
+  int id;
+  String name;
+
+  User(this.id, this.name);
+
+  List<User> users = [
+    User(01, 'shakib'),
+    User(02, 'farsid'),
+    User(03, 'ahmed'),
+  ];
+}

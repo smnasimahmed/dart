@@ -79,6 +79,7 @@ void main() {
 //   }
 
   // map methods (List, Set and Map all have a map method)
+  // map method always take a
   final squares = numbers.map((number) => number * number);
   print(squares);
 
@@ -145,4 +146,9 @@ void main() {
   }
 
   print(characterFrequency(paragraph));
+
+  // Challenge 3: Mapping users
+  List<Map<String, dynamic>> convertUsersToMap(List<User> users) {
+    return users.map((user) => {'id': user.id, 'name': user.name}).toList();
+  }
 }
