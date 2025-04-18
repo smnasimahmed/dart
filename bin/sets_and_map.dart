@@ -1,7 +1,5 @@
 // import 'package:sets/sets_and_map_variable.dart';
 
-import 'dart:async';
-
 import 'package:sets/sets_and_map_variable.dart';
 
 void main() {
@@ -136,4 +134,15 @@ void main() {
   }
 
   print(uniqueCharacters());
+
+  // Challenge 2: Counting on you
+  Map<String, int> characterFrequency(String paragraph) {
+    final Map<String, int> frequency = {};
+    for (var char in paragraph.split(" ")) {
+      frequency[char] = (frequency[char] ?? 0) + 1;
+    }
+    return frequency;
+  }
+
+  print(characterFrequency(paragraph));
 }
