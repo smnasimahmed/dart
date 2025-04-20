@@ -1,5 +1,15 @@
-import 'package:advanced_classes/advanced_classes.dart' as advanced_classes;
+import 'package:advanced_classes/advanced_classes_model.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${advanced_classes.calculate()}!');
+void main() {
+  // // Extending classes
+  final jon = Person('jon', 'Snow');
+  final jane = Student('Jane', 'Snow');
+  print(jon.fullName);
+  print(jane.fullName);
+
+  final historyGrade = Grade.B;
+  jane.grades.add(historyGrade);
+  // add function works cause enum Grade return list
+
+  final child = SomeChild().doSomeWork();
 }
