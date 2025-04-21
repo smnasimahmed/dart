@@ -11,5 +11,17 @@ void main() {
   jane.grades.add(historyGrade);
   // add function works cause enum Grade return list
 
-  final child = SomeChild().doSomeWork();
+  SomeChild().doSomeWork(); // it will print overriden and own class method
+
+  final jessie = SchoolBandMember('Jessie', 'jones');
+  print(jessie);
+
+  final marty = StudentAthlete('Marty', 'McFly');
+  print(marty);
+
+  final student = [jane, jessie, marty];
+  //though all types are diffrent but dart will show the mother type
+
+  print(jessie is Object);
+  print(jessie is! StudentAthlete);
 }

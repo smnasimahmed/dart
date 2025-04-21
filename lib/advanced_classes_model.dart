@@ -30,7 +30,7 @@ class Student extends Person {
   List<Grade> grades = [];
 
   @override
-  String get fullName => '$givenName $sureName Grade ${grades}';
+  String get fullName => '$givenName $sureName';
 }
 
 // Multi-level hierarchy
