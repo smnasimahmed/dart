@@ -65,7 +65,7 @@ class SomeChild extends SomeParent {
   }
 }
 
-// Mini-exercises
+// Mini-exercises 1
 class Fruit {
   String colour;
 
@@ -90,10 +90,34 @@ class Watermelon extends Melon {
 }
 
 class Cantaloupe extends Melon {
-  Cantaloupe(String cantaloupeColour) : super(cantaloupeColour);
+  Cantaloupe(super.cantaloupeColour);
 
   @override
   void describeColor() {
     print("cantaloupe colour is $colour");
+  }
+}
+
+// Abstract classes
+abstract class Animal {
+  bool isAlive = true;
+  void eat();
+  void sleep();
+
+  @override
+  String toString() {
+    return "I am $runtimeType";
+  }
+}
+
+class Platypus extends Animal {
+  Platypus();
+  @override
+  void eat() {
+    // TODO: implement eat
+  }
+  @override
+  void sleep() {
+    // TODO: implement sleep
   }
 }
