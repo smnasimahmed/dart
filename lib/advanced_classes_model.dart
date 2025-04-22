@@ -64,3 +64,36 @@ class SomeChild extends SomeParent {
     print('Child doint some other work');
   }
 }
+
+// Mini-exercises
+class Fruit {
+  String colour;
+
+  Fruit(this.colour);
+
+  void describeColor() {
+    print("colour is $colour");
+  }
+}
+
+class Melon extends Fruit {
+  Melon(super.colour);
+}
+
+class Watermelon extends Melon {
+  Watermelon(super.waterMelonColour);
+
+  @override
+  void describeColor() {
+    print("Watermelon colour is $colour");
+  }
+}
+
+class Cantaloupe extends Melon {
+  Cantaloupe(String cantaloupeColour) : super(cantaloupeColour);
+
+  @override
+  void describeColor() {
+    print("cantaloupe colour is $colour");
+  }
+}

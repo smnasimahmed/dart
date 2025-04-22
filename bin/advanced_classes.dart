@@ -22,6 +22,10 @@ void main() {
   final student = [jane, jessie, marty];
   //though all types are diffrent but dart will show the mother type
 
-  print(jessie is Object);
-  print(jessie is! StudentAthlete);
+  print(jessie is Object); // True
+  print(jessie is! StudentAthlete); // True
+
+  // Mini-exercises
+  Watermelon("Green").describeColor();
+  Cantaloupe("Yellow").describeColor();
 }
