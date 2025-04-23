@@ -102,7 +102,7 @@ class Cantaloupe extends Melon {
 abstract class Animal {
   bool isAlive = true;
   void eat();
-  void sleep();
+  void move();
 
   @override
   String toString() {
@@ -114,10 +114,15 @@ class Platypus extends Animal {
   Platypus();
   @override
   void eat() {
-    // TODO: implement eat
+    print('Munch munch');
   }
+
   @override
-  void sleep() {
-    // TODO: implement sleep
+  void move() {
+    print('Glide glide');
+  }
+
+  void layEggs() {
+    print('Plop plop');
   }
 }

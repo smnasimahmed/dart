@@ -28,4 +28,13 @@ void main() {
   // // Mini-exercises
   // Watermelon("Green").describeColor();
   // Cantaloupe("Yellow").describeColor();
+
+  final platypus = Platypus();
+  print(platypus.isAlive);
+  platypus.eat();
+  platypus.move();
+  platypus.layEggs();
+  print(platypus); // Runtime Type printing
+
+  // Interfaces
 }
