@@ -1,6 +1,8 @@
 import 'package:advanced_classes/advanced_classes_model.dart';
+import 'package:advanced_classes/locator.dart';
+import 'package:advanced_classes/services/weather_service.dart';
 
-void main() {
+void main() async {
   // // // Extending classes
   // final jon = Person('jon', 'Snow');
   // final jane = Student('Jane', 'Snow');
@@ -47,4 +49,11 @@ void main() {
   final temperature = repository.fetchTemperature('Berlin');
 
   print(temperature);
+
+  // get_x
+  setupLocator(useFake: false);
+
+  final weatherService = getIt<WeatherService>();
+  final temp = await weatherService.getTemperature('Berlin');
+  print("Current temperature in Dhaka: $temp°C");
 }

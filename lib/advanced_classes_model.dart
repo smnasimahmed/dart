@@ -128,6 +128,7 @@ class Platypus extends Animal {
 }
 
 // Using a Interfaces
+// using factory
 abstract class DataRepository {
   factory DataRepository() => FakeWebServer();
   double? fetchTemperature(String city);
@@ -140,3 +141,5 @@ class FakeWebServer implements DataRepository {
     return 42.0;
   }
 }
+
+// Using get_x tools
