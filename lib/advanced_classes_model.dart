@@ -126,3 +126,17 @@ class Platypus extends Animal {
     print('Plop plop');
   }
 }
+
+// Using a Interfaces
+abstract class DataRepository {
+  factory DataRepository() => FakeWebServer();
+  double? fetchTemperature(String city);
+}
+
+class FakeWebServer implements DataRepository {
+  @override
+  double? fetchTemperature(String city) {
+    // TODO: implement fetchTemperature
+    return 42.0;
+  }
+}

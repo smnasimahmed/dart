@@ -36,5 +36,15 @@ void main() {
   platypus.layEggs();
   print(platypus); // Runtime Type printing
 
-  // Interfaces
+  // // Using a Interfaces
+  // final DataRepository repository = FakeWebServer();
+  // final tempirature = repository.fetchTemperature('Berlin');
+  // //   But this defeats the whole point of trying to keep the
+  // // implementation details separate from the business logic.
+  // // cause using directly concrete class rater implimentation class
+
+  final repository = DataRepository();
+  final temperature = repository.fetchTemperature('Berlin');
+
+  print(temperature);
 }
