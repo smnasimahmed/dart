@@ -137,9 +137,23 @@ abstract class DataRepository {
 class FakeWebServer implements DataRepository {
   @override
   double? fetchTemperature(String city) {
-    // TODO: implement fetchTemperature
     return 42.0;
   }
 }
 
-// Using get_x tools
+// Mini-exercises 2
+abstract class Bottle {
+  // factory Bottle() => SodaBottle(); // Tightly coupled Not testing feasible
+  void open();
+}
+
+class SodaBottle implements Bottle {
+  @override
+  void open() {
+    print('Fizz fizz');
+  }
+}
+
+class BottleFactory {
+  static Bottle createBottle() => SodaBottle(); // Now it's Losely coupled
+}

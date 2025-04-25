@@ -56,4 +56,8 @@ void main() async {
   final weatherService = getIt<WeatherService>();
   final temp = await weatherService.getTemperature('Berlin');
   print("Current temperature in Dhaka: $temp°C");
+
+  // Mini-exercises 2
+  final sodaBottleRipository = BottleFactory.createBottle();
+  sodaBottleRipository.open();
 }
