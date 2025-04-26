@@ -31,12 +31,12 @@ void main() async {
   // Watermelon("Green").describeColor();
   // Cantaloupe("Yellow").describeColor();
 
-  final platypus = Platypus();
-  print(platypus.isAlive);
-  platypus.eat();
-  platypus.move();
-  platypus.layEggs();
-  print(platypus); // Runtime Type printing
+  // final platypus = Platypus();
+  // print(platypus.isAlive);
+  // platypus.eat();
+  // platypus.move();
+  // platypus.layEggs();
+  // print(platypus); // Runtime Type printing
 
   // // Using a Interfaces
   // final DataRepository repository = FakeWebServer();
@@ -60,4 +60,17 @@ void main() async {
   // Mini-exercises 2
   final sodaBottleRipository = BottleFactory.createBottle();
   sodaBottleRipository.open();
+
+  // Mixins
+  final platypus = Platypus();
+  final robin = Robin();
+
+  platypus.layEggs();
+  robin.layEggs();
+
+  // Mini-exercises 3
+  final sum = Calculator();
+  sum.sum(5, 12);
+
+  // Extension methods
 }

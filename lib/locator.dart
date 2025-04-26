@@ -1,6 +1,5 @@
 // This is file only for GET_X tool
 
-import 'package:advanced_classes/advanced_classes_model.dart';
 import 'package:advanced_classes/services/fake_weather_service.dart';
 import 'package:advanced_classes/services/weather_service.dart';
 import 'package:get_it/get_it.dart';

@@ -110,22 +110,22 @@ abstract class Animal {
   }
 }
 
-class Platypus extends Animal {
-  Platypus();
-  @override
-  void eat() {
-    print('Munch munch');
-  }
+// class Platypus extends Animal {
+//   Platypus();
+//   @override
+//   void eat() {
+//     print('Munch munch');
+//   }
 
-  @override
-  void move() {
-    print('Glide glide');
-  }
+//   @override
+//   void move() {
+//     print('Glide glide');
+//   }
 
-  void layEggs() {
-    print('Plop plop');
-  }
-}
+//   void layEggs() {
+//     print('Plop plop');
+//   }
+// }
 
 // Using a Interfaces
 // using factory
@@ -157,3 +157,61 @@ class SodaBottle implements Bottle {
 class BottleFactory {
   static Bottle createBottle() => SodaBottle(); // Now it's Losely coupled
 }
+
+// Mixins
+mixin EggLayer {
+  void layEggs() {
+    print('Plop Plop');
+  }
+}
+
+mixin Flyer {
+  void fly() {
+    print('Swoosh swoosh');
+  }
+}
+
+abstract class Bird {
+  void fly();
+  void layEggs();
+}
+
+class Robin extends Bird with EggLayer, Flyer {
+  @override
+  void fly() {
+    print('Swoosh swoosh');
+  }
+
+  // If a mixin provides an implementation of an abstract method, you don't have
+  // to implement it again manually in your class
+  // @override
+  // void layEggs() {
+  //   print('Plop ');
+  // }
+}
+
+class Platypus extends Animal with EggLayer {
+  Platypus();
+  @override
+  void eat() {
+    print('Munch munch');
+  }
+
+  @override
+  void move() {
+    print('Glide glide');
+  }
+
+  // void layEggs() {
+  //   print('Plop plop');
+  // }
+}
+
+// Mini-exercises 3
+mixin Adder {
+  void sum(double firstValue, double secondValue) {
+    print(firstValue + secondValue);
+  }
+}
+
+class Calculator with Adder {}
