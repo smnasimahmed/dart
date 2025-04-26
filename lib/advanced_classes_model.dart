@@ -215,3 +215,10 @@ mixin Adder {
 }
 
 class Calculator with Adder {}
+
+// Extension methods
+extension NumberExtension on int {
+  bool isDivisibleBy(int other) {
+    return this % other == 0;
+  }
+}

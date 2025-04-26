@@ -73,4 +73,6 @@ void main() async {
   sum.sum(5, 12);
 
   // Extension methods
+  int number = 12;
+  print(number.isDivisibleBy(3));
 }
