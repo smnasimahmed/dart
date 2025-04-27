@@ -217,8 +217,49 @@ mixin Adder {
 class Calculator with Adder {}
 
 // Extension methods
+
 extension NumberExtension on int {
   bool isDivisibleBy(int other) {
     return this % other == 0;
   }
 }
+
+// String encode(String input) {
+//   //  StringBuffer() a special tool in Dart to build strings efficiently
+//   // like an empty box where you can add characters one by one.
+//   final output = StringBuffer();
+
+//   for (final codepoint in input.runes) {
+//     output.writeCharCode(codepoint + 1);
+//   }
+//   return output.toString();
+// }
+
+extension Encoding on String {
+  // Converting to an extension
+  String get encoded {
+    return _code(1, this);
+  }
+}
+
+extension Decoding on String {
+  // Converting to an extension
+  String get decoded {
+    return _code(-1, this);
+  }
+}
+
+// Refactoring to remove code duplication
+String _code(int step, String input) {
+  final output = StringBuffer();
+  for (var codepoint in input.runes) {
+    output.writeCharCode(codepoint + step);
+  }
+  return output.toString();
+}
+// Note: 
+  // While we’re inside String, there’s no need to
+  // pass 'input' as an argument. If we need a reference to
+  // the string object, we can use the 'this' keyword.
+
+

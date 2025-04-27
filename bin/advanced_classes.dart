@@ -75,4 +75,21 @@ void main() async {
   // Extension methods
   int number = 12;
   print(number.isDivisibleBy(3));
+
+  // final original = 'abc';
+  // final secret = encode(original);
+  // print(secret);
+
+  final original = 'abc';
+  final secret = original.encoded;
+  print(secret);
+  final revealed = secret.decoded;
+  print(revealed);
+
+  // testing encoding decoding
+  final testOriginal = 'I like extensions!';
+  final testSecret = testOriginal.encoded;
+  print(testSecret);
+  final testRevealed = testSecret.decoded;
+  print(testRevealed);
 }
