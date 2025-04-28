@@ -257,9 +257,24 @@ String _code(int step, String input) {
   }
   return output.toString();
 }
-// Note: 
-  // While we’re inside String, there’s no need to
-  // pass 'input' as an argument. If we need a reference to
-  // the string object, we can use the 'this' keyword.
+// Note:
+// While we’re inside String, there’s no need to
+// pass 'input' as an argument. If we need a reference to
+// the string object, we can use the 'this' keyword.
 
+// Enum extension example
+enum ProgrammingLanguage { dart, swift, javaScript }
 
+extension EnumExtention on ProgrammingLanguage {
+  bool get isStronglyTyped {
+    switch (this) {
+      case ProgrammingLanguage.dart:
+      case ProgrammingLanguage.swift:
+        return true;
+      case ProgrammingLanguage.javaScript:
+        return false;
+      default:
+        throw Exception('Unknown Programming Language $this');
+    }
+  }
+}

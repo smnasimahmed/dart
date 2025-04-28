@@ -92,4 +92,8 @@ void main() async {
   print(testSecret);
   final testRevealed = testSecret.decoded;
   print(testRevealed);
+
+  // Enum extension example
+  final language = ProgrammingLanguage.dart;
+  print(language.isStronglyTyped);
 }
