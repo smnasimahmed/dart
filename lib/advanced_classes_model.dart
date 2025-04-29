@@ -278,3 +278,6 @@ extension EnumExtention on ProgrammingLanguage {
     }
   }
 }
+
+// Challenges Advance Class
+class Comparable {}
