@@ -103,11 +103,6 @@ abstract class Animal {
   bool isAlive = true;
   void eat();
   void move();
-
-  @override
-  String toString() {
-    return "I am $runtimeType";
-  }
 }
 
 // class Platypus extends Animal {
@@ -190,22 +185,23 @@ class Robin extends Bird with EggLayer, Flyer {
   // }
 }
 
-class Platypus extends Animal with EggLayer {
-  Platypus();
-  @override
-  void eat() {
-    print('Munch munch');
-  }
+// Platypus class commented cause this class using for Challenges
+// class Platypus extends Animal with EggLayer {
+//   Platypus();
+//   @override
+//   void eat() {
+//     print('Munch munch');
+//   }
 
-  @override
-  void move() {
-    print('Glide glide');
-  }
+//   @override
+//   void move() {
+//     print('Glide glide');
+//   }
 
-  // void layEggs() {
-  //   print('Plop plop');
-  // }
-}
+//   // void layEggs() {
+//   //   print('Plop plop');
+//   // }
+// }
 
 // Mini-exercises 3
 mixin Adder {
@@ -250,6 +246,8 @@ extension Decoding on String {
 }
 
 // Refactoring to remove code duplication
+//  StringBuffer() a special tool in Dart to build strings efficiently
+// like an empty box where you can add characters one by one.
 String _code(int step, String input) {
   final output = StringBuffer();
   for (var codepoint in input.runes) {
@@ -280,4 +278,66 @@ extension EnumExtention on ProgrammingLanguage {
 }
 
 // Challenges Advance Class
-class Comparable {}
+// Challenge 1: Heavy monotremes
+class Platypus extends Animal with EggLayer implements Comparable<Platypus> {
+  int weight;
+
+  Platypus(this.weight);
+  @override
+  void eat() {
+    print('Munch munch');
+  }
+
+  @override
+  void move() {
+    print('Glide glide');
+  }
+
+  // void layEggs() {
+  //   print('Plop plop');
+  // }
+  @override
+  int compareTo(other) {
+    return weight.compareTo(other.weight);
+  }
+
+  @override
+  String toString() {
+    return 'Platypus(weight: $weight)';
+  }
+}
+
+// Challenge 2: Fake notes
+abstract interface class Note {
+  factory Note() => FakeNotes();
+  void note();
+}
+
+class FakeNotes implements Note {
+  @override
+  void note() {
+    print('Fake Notebook');
+  }
+}
+
+// Challenge 3: Time to code
+extension TimeDuration on int {
+  Duration get minutes => Duration(minutes: this);
+}
+
+// Writes give me a encoded megssage
+extension WriterTxt on String {
+  String get writerEncoded {
+    return _specialCode(-4, this);
+  }
+}
+
+String _specialCode(int step, String input) {
+  StringBuffer output = StringBuffer();
+  for (var i = 0; i >= step; i--) {
+    for (var codepoint in input.runes) {
+      output.writeCharCode(codepoint + i);
+    }
+  }
+  return output.toString();
+}

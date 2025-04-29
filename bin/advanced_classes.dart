@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:advanced_classes/advanced_classes_model.dart';
 import 'package:advanced_classes/locator.dart';
 import 'package:advanced_classes/services/weather_service.dart';
@@ -62,11 +64,11 @@ void main() async {
   sodaBottleRipository.open();
 
   // Mixins
-  final platypus = Platypus();
-  final robin = Robin();
+  // final platypus = Platypus();
+  // final robin = Robin();
 
-  platypus.layEggs();
-  robin.layEggs();
+  // platypus.layEggs();
+  // robin.layEggs();
 
   // Mini-exercises 3
   final sum = Calculator();
@@ -87,13 +89,47 @@ void main() async {
   print(revealed);
 
   // testing encoding decoding
-  final testOriginal = 'I like extensions!';
+  final testOriginal =
+      "The secret to learning Dart well is to be curious and just try things. Since you're reading this, that obviously describes you. Good job!";
   final testSecret = testOriginal.encoded;
   print(testSecret);
   final testRevealed = testSecret.decoded;
   print(testRevealed);
 
   // Enum extension example
-  final language = ProgrammingLanguage.dat;
+  final language = ProgrammingLanguage.dart;
   print(language.isStronglyTyped);
+
+// Challenges Advance Class
+// Challenge 1: Heavy monotremes
+  Platypus pla1 = Platypus(10);
+  Platypus pla2 = Platypus(5);
+  Platypus pla3 = Platypus(6);
+  Platypus pla4 = Platypus(7);
+  Platypus pla5 = Platypus(22);
+  Platypus pla6 = Platypus(4);
+
+  List<Platypus> platypuses = [pla1, pla2, pla3, pla4, pla5, pla6];
+
+  print("Before Sorting");
+  platypuses.forEach(print);
+
+  print("After Sorting");
+  platypuses.sort();
+  platypuses.forEach(print);
+
+  // Challenge 2: Fake notes
+  final printNote = Note();
+  printNote.note();
+
+  // Challenge 3: Time to code
+  final timeRemaining = 3.minutes;
+  print(timeRemaining);
+
+  // Writes give me a encoded megssage
+  String writerMessage = """Uif!tfdsfu!up!mfbsojoh!Ebsu!xfmm!jt!up!dg"ewtkqw
+u"cpf"lwuv"vt{"vjkpiu0"Vlqfh#|rx*uh#uhdglqj#wkl
+v/#wkdw#reylrxvo|#ghvfulehv#|rx1#Kssh\$nsf%"""
+      .writerEncoded;
+  print(writerMessage);
 }
