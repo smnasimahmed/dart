@@ -5,12 +5,12 @@ class Todo {
       required this.title,
       required this.completed});
 
-  factory Todo.fromJson(Map<String, Object?> jsonMap) {
+  factory Todo.fromJson(Map<String, Object?> jsonMapp) {
     return Todo(
-        userId: Map<String,Object?> ['userId'] as int,
-        id: jsonMap['id'] as int,
-        title: jsonMap['title'] as String,
-        completed: jsonMap['completed'] as bool);
+        userId: jsonMapp['userId'] as int,
+        id: jsonMapp['id'] as int,
+        title: jsonMapp['title'] as String,
+        completed: jsonMapp['completed'] as bool);
   }
   final int userId;
   final int id;
