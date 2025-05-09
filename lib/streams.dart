@@ -10,7 +10,20 @@ Future<void> readFile() async {
   final lngFile = File(
       'F:/Dart/asynchronous_programming/asynchronous_programming/assets/text_long.txt');
   final stream = lngFile.openRead();
-  stream.listen((data) => print(data.length));
+  // // Here .listen is a CallBack
+  // // once a stream in use another things can't use the same stream
+  // // So we commented it
+  // stream.listen(
+  //   (data) {
+  //     print(data.length);
+  //   },
+  //   onError: (error) {
+  //     print(error);
+  //   },
+  //   onDone: () {
+  //     print('All Finished');
+  //   },
+  // );
 
   // // Made this folder to write Lorium Epsum 1000 time
   // // on text_long.txt as book instruction
@@ -20,4 +33,15 @@ Future<void> readFile() async {
   // for (var i = 0; i < 1000; i++) {
   //   lngFile.writeAsStringSync('$contents \n', mode: FileMode.append);
   // }
+
+  //  We can also use async await for stream as we used in Future
+  try {
+    await for (var data in stream) {
+      print(data.length);
+    }
+  } on Exception catch (error) {
+    print(error);
+  } finally {
+    print("Error handelled");
+  }
 }
