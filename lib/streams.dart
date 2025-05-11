@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'dart:io';
 
 Future<void> readFile() async {
+  // Reading from a future
   final file = File(
       'F:/Dart/asynchronous_programming/asynchronous_programming/assets/text.txt');
   final contents = await file.readAsString();
@@ -44,4 +46,22 @@ Future<void> readFile() async {
   } finally {
     print("Error handelled");
   }
+}
+
+// Cancelling a stream
+Future<void> cancleStream() async {
+  final file = File(
+      'F:/Dart/asynchronous_programming/asynchronous_programming/assets/text_long.txt');
+  final stream = file.openRead();
+  StreamSubscription<List<int>>? subscription;
+  subscription = stream.listen(
+    (data) {
+      print(data.length);
+      subscription?.cancel();
+    },
+    cancelOnError: true,
+    onDone: () {
+      print('All finished');
+    },
+  );
 }
