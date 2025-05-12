@@ -26,5 +26,11 @@ Future<void> main() async {
   // await readFile();
 
   // Cancelling a stream
-  await cancleStream();
+  // await cancleStream();
+
+  // Transforming a stream
+  // await transformStream();
+
+  // Mini-exercises 2
+  await miniExcercises2();
 }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 Future<void> readFile() async {
@@ -64,4 +65,33 @@ Future<void> cancleStream() async {
       print('All finished');
     },
   );
+}
+
+// Transforming a stream
+Future<void> transformStream() async {
+  final file = File(
+      'F:/Dart/asynchronous_programming/asynchronous_programming/assets/text_long.txt');
+  final stream = file.openRead();
+  // stream.listen(
+  //   (data) {
+  //     print(data);
+  //   },
+  // );
+  // difference here is that you added the transform method
+  // to the stream.
+  await for (var data in stream.transform(utf8.decoder)) {
+    print(data);
+  }
+}
+
+// Mini-exercises 2
+Future<void> miniExcercises2() async {
+  final myStream = Stream<int>.periodic(
+    Duration(seconds: 1),
+    (value) => value,
+  ).take(10);
+
+  await for (var data in myStream) {
+    print(data);
+  }
 }
