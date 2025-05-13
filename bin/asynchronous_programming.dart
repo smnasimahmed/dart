@@ -33,4 +33,6 @@ Future<void> main() async {
 
   // Mini-exercises 2
   await miniExcercises2();
+
+  // isolate
 }
