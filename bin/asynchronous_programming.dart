@@ -1,4 +1,7 @@
 // import 'package:asynchronous_programming/async_await_methods.dart';
+import 'dart:isolate';
+
+import 'package:asynchronous_programming/isolate.dart';
 import 'package:asynchronous_programming/streams.dart';
 
 Future<void> main() async {
@@ -32,7 +35,22 @@ Future<void> main() async {
   // await transformStream();
 
   // Mini-exercises 2
-  await miniExcercises2();
+  // await miniExcercises2();
 
   // isolate
+  // print("OK, I'm counting...");
+  // print(playHideAndSeekTheLongVersion());
+
+  // Spawning an isolate
+  final recivePort = ReceivePort();
+  final isolate = await Isolate.spawn(
+      isolatePlayHideAndSeekTheLongVersion, recivePort.sendPort);
+
+  recivePort.listen(
+    (message) {
+      print(message);
+      recivePort.close();
+      isolate.kill();
+    },
+  );
 }
