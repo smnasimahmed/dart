@@ -1,6 +1,7 @@
 // import 'package:asynchronous_programming/async_await_methods.dart';
 import 'dart:isolate';
 
+import 'package:asynchronous_programming/challenges.dart';
 import 'package:asynchronous_programming/isolate.dart';
 import 'package:asynchronous_programming/streams.dart';
 
@@ -42,13 +43,40 @@ Future<void> main() async {
   // print(playHideAndSeekTheLongVersion());
 
   // Spawning an isolate
+  // final recivePort = ReceivePort();
+  // final isolate = await Isolate.spawn(
+  //     isolatePlayHideAndSeekTheLongVersion, recivePort.sendPort);
+
+  // recivePort.listen(
+  //   (message) {
+  //     print(message);
+  //     recivePort.close();
+  //     isolate.kill();
+  //   },
+  // );
+
+  // challange1();
+  // await fetchcComments();
+  // dataStream();
+
+  // challange 4
   final recivePort = ReceivePort();
-  final isolate = await Isolate.spawn(
-      isolatePlayHideAndSeekTheLongVersion, recivePort.sendPort);
+  final isolate = await Isolate.spawn(fibonacciFromAfar, {
+    'sendPort': recivePort.sendPort,
+    'n': 10,
+  });
 
   recivePort.listen(
-    (message) {
-      print(message);
+    (onData) {
+      print(onData);
+    },
+    onError: (e) {
+      print(e);
+      recivePort.close();
+      isolate.kill();
+    },
+    onDone: () {
+      print('Stream Fibonacci Complete');
       recivePort.close();
       isolate.kill();
     },
